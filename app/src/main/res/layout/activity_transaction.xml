@@ -7,20 +7,23 @@
     android:background="#F2F2F2"
     android:orientation="vertical"
     android:fitsSystemWindows="true"
-    tools:context=".ui.home.HomeFragment">
+    tools:context=".TransactionActivity">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1">
+
         <androidx.core.widget.NestedScrollView
             android:id="@+id/nested_scroll_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scrollbars="none">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
+
                 <com.google.android.material.appbar.AppBarLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -31,19 +34,19 @@
                         android:id="@+id/toolbar"
                         android:layout_width="match_parent"
                         android:layout_height="?attr/actionBarSize"
-                        app:title="Transaction History"
-                        app:titleTextColor="#0288D1"
                         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
                         app:contentInsetStartWithNavigation="0dp"
                         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-                        />
+                        app:title="Transaction History"
+                        app:titleTextColor="#1A237E" />
                 </com.google.android.material.appbar.AppBarLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:orientation="vertical"
                     android:paddingLeft="15dp"
-                    android:paddingRight="15dp"
-                    android:orientation="vertical">
+                    android:paddingRight="15dp">
 
                     <androidx.cardview.widget.CardView
                         android:layout_width="match_parent"
@@ -56,8 +59,8 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:gravity="center"
                             android:background="@drawable/bg_button"
+                            android:gravity="center"
                             android:orientation="vertical">
 
                             <LinearLayout
@@ -74,48 +77,45 @@
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
-                                    android:textSize="16sp"
                                     android:fontFamily="sans-serif-medium"
                                     android:gravity="center_vertical"
                                     android:text="Money Spent Today"
                                     android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
-                                    android:textColor="#B3E5FC" />
+                                    android:textColor="#B3E5FC"
+                                    android:textSize="16sp" />
 
 
                             </LinearLayout>
+
                             <View
                                 android:layout_width="0dp"
-                                android:layout_height="10dp"/>
+                                android:layout_height="10dp" />
 
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="242.232"
+                                android:fontFamily="sans-serif-medium"
+                                android:text="₹ 242.25"
+                                android:textStyle="bold"
                                 android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-                                android:textColor="#FFFFFF"
-                                android:fontFamily="sans-serif-medium" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Rupees"
-                                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
-                                android:textColor="#81DAFA" />
+                                android:textColor="#FFFFFF" />
 
                             <View
                                 android:layout_width="0dp"
-                                android:layout_height="25dp"/>
+                                android:layout_height="25dp" />
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
 
                     <View
                         android:layout_width="0dp"
-                        android:layout_height="3dp"/>
+                        android:layout_height="3dp" />
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
+
                         <androidx.cardview.widget.CardView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
@@ -130,42 +130,40 @@
                                 android:gravity="center_vertical"
                                 android:orientation="horizontal"
                                 android:padding="15dp">
+
                                 <RelativeLayout
                                     android:layout_width="25dp"
                                     android:layout_height="25dp">
+
                                     <ImageView
                                         android:layout_width="match_parent"
                                         android:layout_height="match_parent"
                                         android:layout_centerInParent="true"
-                                        android:src="@drawable/shape_default"
-                                        app:tint="#E6E6E6"/>
+                                        android:src="@drawable/recharge"
+                                        app:tint="#2A932E" />
 
-                                    <ImageView
-                                        android:layout_width="15dp"
-                                        android:layout_height="15dp"
-                                        android:layout_centerInParent="true"
-                                        android:rotation="180"
-                                        android:src="@drawable/ic_baseline_arrow_downward_24"
-                                        app:tint="#999999"/>
                                 </RelativeLayout>
+
                                 <View
                                     android:layout_width="20dp"
-                                    android:layout_height="0dp"/>
+                                    android:layout_height="0dp" />
 
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
+                                    android:fontFamily="sans-serif-medium"
                                     android:text="Recharge"
+                                    android:textStyle="bold"
                                     android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
-                                    android:textColor="#1A237E"
-                                    android:fontFamily="sans-serif-medium"/>
+                                    android:textColor="#29872D" />
                             </LinearLayout>
 
                         </androidx.cardview.widget.CardView>
 
                         <View
                             android:layout_width="3dp"
-                            android:layout_height="0dp"/>
+                            android:layout_height="0dp" />
+
                         <androidx.cardview.widget.CardView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
@@ -173,12 +171,14 @@
                             app:cardCornerRadius="6dp"
                             app:cardElevation="2dp"
                             app:cardUseCompatPadding="true">
+
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:gravity="center_vertical"
                                 android:orientation="horizontal"
                                 android:padding="15dp">
+
                                 <RelativeLayout
                                     android:layout_width="25dp"
                                     android:layout_height="25dp">
@@ -187,19 +187,14 @@
                                         android:layout_width="match_parent"
                                         android:layout_height="match_parent"
                                         android:layout_centerInParent="true"
-                                        android:src="@drawable/shape_default"
-                                        app:tint="#E6E6E6" />
+                                        android:src="@drawable/rechargehistory"
+                                        app:tint="#1A237E" />
 
-                                    <ImageView
-                                        android:layout_width="15dp"
-                                        android:layout_height="15dp"
-                                        android:layout_centerInParent="true"
-                                        android:src="@drawable/ic_baseline_arrow_downward_24"
-                                        app:tint="#999999" />
                                 </RelativeLayout>
+
                                 <View
                                     android:layout_width="20dp"
-                                    android:layout_height="0dp"/>
+                                    android:layout_height="0dp" />
 
                                 <TextView
                                     android:id="@+id/receiveTxview"
@@ -207,7 +202,8 @@
                                     android:layout_height="wrap_content"
                                     android:clickable="true"
                                     android:fontFamily="sans-serif-medium"
-                                    android:text="Recharge History"
+                                    android:text="History"
+                                    android:textStyle="bold"
                                     android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
                                     android:textColor="#1A237E" />
                             </LinearLayout>
@@ -218,13 +214,14 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="5dp"
                         android:layout_marginTop="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:fontFamily="sans-serif-medium"
                         android:gravity="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                         android:text="Today"
-                        android:textColor="#999999"
-                        android:fontFamily="sans-serif-medium" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                        android:textColor="#999999" />
+
                     <androidx.cardview.widget.CardView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -237,6 +234,7 @@
                             android:layout_height="wrap_content"
                             android:orientation="horizontal"
                             android:padding="15dp">
+
                             <RelativeLayout
                                 android:layout_width="20dp"
                                 android:layout_height="20dp"
@@ -246,19 +244,15 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:layout_centerInParent="true"
-                                    android:src="@drawable/shape_default"
-                                    app:tint="#E6E6E6"/>
-                                <ImageView
-                                    android:layout_width="15dp"
-                                    android:layout_height="15dp"
-                                    android:layout_centerInParent="true"
-                                    app:tint="#999999"
-                                    android:src="@drawable/ic_baseline_arrow_downward_24"/>
+                                    android:src="@drawable/recharge"
+                                    app:tint="#E61818" />
 
                             </RelativeLayout>
+
                             <View
                                 android:layout_width="10dp"
-                                android:layout_height="0dp"/>
+                                android:layout_height="0dp" />
+
                             <LinearLayout
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
@@ -268,17 +262,16 @@
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="Receive"
+                                    android:text="Paid"
                                     android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-                                    android:textColor="#1A237E"
-                                    />
+                                    android:textColor="#1A237E" />
+
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="29 oct 19 15:00"
+                                    android:text="27 Apr 23 15:34"
                                     android:textAppearance="@style/TextAppearance.AppCompat.Caption"
-                                    android:textColor="#999999"
-                                    />
+                                    android:textColor="#999999" />
                             </LinearLayout>
 
 
@@ -291,18 +284,20 @@
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="10 USB"
+                                    android:text="12 ₹"
                                     android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                                    android:textColor="#03A9FA"/>
+                                    android:textColor="#03A9FA" />
+
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="Andy"
+                                    android:text="Rupesh Singh [UP9S5464]"
                                     android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-                                    android:textColor="#999999"/>
+                                    android:textColor="#999999" />
                             </LinearLayout>
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
+
                     <androidx.cardview.widget.CardView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -315,6 +310,7 @@
                             android:layout_height="wrap_content"
                             android:orientation="horizontal"
                             android:padding="15dp">
+
                             <RelativeLayout
                                 android:layout_width="20dp"
                                 android:layout_height="20dp"
@@ -324,19 +320,16 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:layout_centerInParent="true"
-                                    android:src="@drawable/shape_default"
-                                    app:tint="#E6E6E6"/>
-                                <ImageView
-                                    android:layout_width="15dp"
-                                    android:layout_height="15dp"
-                                    android:layout_centerInParent="true"
-                                    app:tint="#999999"
-                                    android:src="@drawable/ic_baseline_arrow_downward_24"/>
+                                    android:src="@drawable/recharge"
+                                    app:tint="#E61818" />
+
 
                             </RelativeLayout>
+
                             <View
                                 android:layout_width="10dp"
-                                android:layout_height="0dp"/>
+                                android:layout_height="0dp" />
+
                             <LinearLayout
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
@@ -346,17 +339,16 @@
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="Receive"
+                                    android:text="Paid"
                                     android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-                                    android:textColor="#1A237E"
-                                    />
+                                    android:textColor="#1A237E" />
+
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="29 oct 19 15:00"
+                                    android:text="22 Apr 23 11:12"
                                     android:textAppearance="@style/TextAppearance.AppCompat.Caption"
-                                    android:textColor="#999999"
-                                    />
+                                    android:textColor="#999999" />
                             </LinearLayout>
 
 
@@ -369,18 +361,20 @@
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="10 USB"
+                                    android:text="15 ₹"
                                     android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                                    android:textColor="#03A9FA"/>
+                                    android:textColor="#03A9FA" />
+
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="Andy"
+                                    android:text="Ravi Kumar [UP12B5642}"
                                     android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-                                    android:textColor="#999999"/>
+                                    android:textColor="#999999" />
                             </LinearLayout>
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
+
                     <androidx.cardview.widget.CardView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -393,6 +387,7 @@
                             android:layout_height="wrap_content"
                             android:orientation="horizontal"
                             android:padding="15dp">
+
                             <RelativeLayout
                                 android:layout_width="20dp"
                                 android:layout_height="20dp"
@@ -402,19 +397,16 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:layout_centerInParent="true"
-                                    android:src="@drawable/shape_default"
-                                    app:tint="#E6E6E6"/>
-                                <ImageView
-                                    android:layout_width="15dp"
-                                    android:layout_height="15dp"
-                                    android:layout_centerInParent="true"
-                                    app:tint="#999999"
-                                    android:src="@drawable/ic_baseline_arrow_downward_24"/>
+                                    android:src="@drawable/recharge"
+                                    app:tint="#E61818" />
+
 
                             </RelativeLayout>
+
                             <View
                                 android:layout_width="10dp"
-                                android:layout_height="0dp"/>
+                                android:layout_height="0dp" />
+
                             <LinearLayout
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
@@ -424,17 +416,16 @@
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="Receive"
+                                    android:text="Paid"
                                     android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-                                    android:textColor="#1A237E"
-                                    />
+                                    android:textColor="#1A237E" />
+
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="29 oct 19 15:00"
+                                    android:text="18 Apr 23 9:20"
                                     android:textAppearance="@style/TextAppearance.AppCompat.Caption"
-                                    android:textColor="#999999"
-                                    />
+                                    android:textColor="#999999" />
                             </LinearLayout>
 
 
@@ -447,18 +438,20 @@
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="1.000 USB"
+                                    android:text="28 ₹"
                                     android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                                    android:textColor="#03A9FA"/>
+                                    android:textColor="#03A9FA" />
+
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="Albert"
+                                    android:text="Ashok Verma [UP2E6423]"
                                     android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-                                    android:textColor="#999999"/>
+                                    android:textColor="#999999" />
                             </LinearLayout>
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
+
                     <androidx.cardview.widget.CardView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -471,6 +464,7 @@
                             android:layout_height="wrap_content"
                             android:orientation="horizontal"
                             android:padding="15dp">
+
                             <RelativeLayout
                                 android:layout_width="20dp"
                                 android:layout_height="20dp"
@@ -480,20 +474,16 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:layout_centerInParent="true"
-                                    android:src="@drawable/shape_default"
-                                    app:tint="#E6E6E6"/>
-                                <ImageView
-                                    android:layout_width="15dp"
-                                    android:layout_height="15dp"
-                                    android:layout_centerInParent="true"
-                                    app:tint="#999999"
-                                    android:rotation="180"
-                                    android:src="@drawable/ic_baseline_arrow_downward_24"/>
+                                    android:src="@drawable/recharge"
+                                    app:tint="#E61818" />
+
 
                             </RelativeLayout>
+
                             <View
                                 android:layout_width="10dp"
-                                android:layout_height="0dp"/>
+                                android:layout_height="0dp" />
+
                             <LinearLayout
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
@@ -503,17 +493,16 @@
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="Sent"
+                                    android:text="Paid"
                                     android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-                                    android:textColor="#1A237E"
-                                    />
+                                    android:textColor="#1A237E" />
+
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="29 oct 19 15:00"
+                                    android:text="14 Apr 23 13:26"
                                     android:textAppearance="@style/TextAppearance.AppCompat.Caption"
-                                    android:textColor="#999999"
-                                    />
+                                    android:textColor="#999999" />
                             </LinearLayout>
 
 
@@ -526,15 +515,16 @@
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="100 USB"
+                                    android:text="8 ₹"
                                     android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                                    android:textColor="#03A9FA"/>
+                                    android:textColor="#03A9FA" />
+
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="Box"
+                                    android:text="Abhay Gupta [UP9S6543]"
                                     android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-                                    android:textColor="#999999"/>
+                                    android:textColor="#999999" />
                             </LinearLayout>
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
