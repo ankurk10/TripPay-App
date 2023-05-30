@@ -101,6 +101,8 @@
                 android:textColor="#3B608C"
                 android:textAlignment="center"
                 android:layout_marginTop="36dp"/>
+
         </LinearLayout>
+
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

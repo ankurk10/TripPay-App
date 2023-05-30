@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
         ImageView rechargeHistory = findViewById(R.id.btnRechargeHistory);
         ImageView helpButton = findViewById(R.id.btnHelp);
         ImageView settingButton = findViewById(R.id.btnSettings);
+        ImageView shareButton = findViewById(R.id.btnShare);
         Button rechargeButton = findViewById(R.id.button_recharge);
 
 
@@ -85,6 +86,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        shareButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(Intent.ACTION_VIEW);
                 startActivity(intent);
             }
         });
